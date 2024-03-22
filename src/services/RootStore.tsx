@@ -2,8 +2,10 @@ import { ReactNode, createContext, useContext } from "react";
 import { FavoriteFilmsService } from "./favorite-film-service";
 import { FilmService } from "./film-service";
 import { SearchSettingsService } from "./search-settings-service";
+import { UserService } from "./user-service";
 
 export class RootStore {
+  userService = new UserService();
   filmService = new FilmService();
   searchSettingsService = new SearchSettingsService();
   favoriteFilmsService = new FavoriteFilmsService();

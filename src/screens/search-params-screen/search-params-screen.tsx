@@ -9,6 +9,7 @@ import {
   View,
 } from "react-native";
 import RNPickerSelect, { PickerStyle } from "react-native-picker-select";
+import { FIREBASE_AUTH } from "../../../firebase.config";
 import { useStore } from "../../services/RootStore";
 import { Text } from "../../shared/components/custom-text";
 import { SearchSettingItem } from "../../shared/components/search-setting-item";
@@ -169,6 +170,7 @@ export const SearchParamsScreen = observer(
             />
           }
         />
+        <Button title="Выйти" onPress={() => FIREBASE_AUTH.signOut()} />
       </View>
     );
   }

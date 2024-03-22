@@ -61,8 +61,6 @@ export const MainScreen = observer(
         </View>
       );
 
-    console.log(filmService.film?.description);
-
     return (
       <View style={styles.wrapper}>
         <MainPageHeader
